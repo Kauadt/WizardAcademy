@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>WizardAcademy</title>
+</head>
+
+<body>
+
+    <audio id="soundtrack" src="sound/soundtrack.mp3" loop></audio>
+    <audio id="slice" src="sound/cut.mp3"></audio>
+    <audio id="fireMagic" src="sound/fireMagic.mp3"></audio>
+    <audio id="jumping" src="sound/jump.mp3"></audio>
+
+    <main id="gameScreen">
+        <div id="gameBar">
+            <div class="headline">
+                <h1>WizardAcademy</h1>
+                <h5>Train here and become the most powerful mage in the valley of shadows</h5>
+                <h6>Use mouse and keyboard!</h6>
+                <button id="btnStart">Start</button>
+            </div>
+        </div>
+
+        <div id="gameScene">
+            <div id="caracther" class="idle"></div>
+            <div class="portal"></div>
+            <div class="controls">
+                <h3>CONTROLS</h3>
+                <div>
+                    <p> A, D, E, Q, SPACE, MOUSE LEFT,</p>
+                    <img src="images/arrowRight.png"><span>,</span>
+                    <img src="images/arrowLeft.png">
+                </div>
+                <p>OBS: Just clicks and activate sound for better experinece</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="finishScreen">
+        <h1>Wow!</h1>
+        <h5>You have grown very strong, warrior. Time to rest!</h5>
+        <button id="btnPlayAgain">Start</button>
+    </div>
+
+    <footer>
+        <p>kauadt <br> &copy; Todos os direitos reservados</p>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

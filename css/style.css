@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@200;300;400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+#gameScreen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#gameBar {
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    background: #00000055 url('../images/bg2.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    background-position: bottom;
+    background-blend-mode: darken;
+}
+
+.headline {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 70px;
+    gap: 5px;
+}
+
+.headline>h1 {
+    white-space: nowrap;
+    font-family: 'Lobster', cursive;
+    font-size: 65px;
+    color: #3d78f6e9;
+}
+
+.headline>h5 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    white-space: nowrap;
+    color: #fff;
+}
+.headline>h6 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    color: #d9d2ef;
+}
+
+h1~button {
+    border: none;
+    height: 40px;
+    width: 150px;
+    border-radius: 169px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    color: #5382e8;
+    background-color: #fafafae4;
+}
+
+h1~button:hover {
+    opacity: 0.8;
+}
+
+h1~button:active {
+    transform: scale(0.99);
+}
+
+#gameScene {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('../images/gameBg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#caracther {
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    bottom: 30px;
+}
+
+.portal{
+    width: 310px;
+    height: 310px;
+    background: url('../images/portal.png') 0 0;
+    background-size: cover;
+    position: absolute;
+    bottom: 30px;
+    right: 0;   
+}
+
+.idle {
+    background: url("../images/idle.png") 0 0;
+    animation: idle 1s steps(7) infinite;
+}
+
+.run {
+    background: url("../images/run.png") 0 0;
+    bottom: 2px !important;
+    animation: run 500ms steps(8) infinite;
+}
+
+.fireball {
+    width: 470px !important;
+    background: url("../images/fireball.png") 0 0;
+    animation: fireball 0.5s steps(8);
+}
+
+
+.jump {
+    width: 470px !important;
+    background: url("../images/jump.png") 0 0;
+    animation: jump 0.8s steps(9);
+}
+
+.atack {
+    width: 470px !important;
+    background: url("../images/atack.png") 0 0;
+    animation: atack 0.2s steps(4);
+}
+
+.flameJet {
+    width: 500px !important;
+    background: url("../images/flameJet.png") 0 0;
+    animation: flameJet 1s steps(14);
+}
+
+#finishScreen {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 70px;
+    gap: 5px;
+    background: #04100385 url('../images/bg3.png');
+    background-size: cover;
+    background-position: bottom;
+    background-blend-mode: darken;
+}
+
+
+#finishScreen>h1 {
+    white-space: nowrap;
+    font-family: 'Lobster', cursive;
+    font-size: 65px;
+    color: #34e15c;
+}
+
+#finishScreen>h5 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    white-space: nowrap;
+    color: #fff;
+}
+
+#finishScreen h1~button {
+    border: none;
+    height: 40px;
+    width: 150px;
+    border-radius: 169px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    color: #04270c;
+    background-color: #fafafae4;
+}
+
+h1~button:hover {
+    opacity: 0.8;
+}
+
+h1~button:active {
+    transform: scale(0.99);
+}
+
+.controls{
+    background-color: #ffffff7b;
+    width: 300px;
+    height: 115px;
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.controls > div{
+    display: flex;
+    align-items: center;
+}
+.controls > p{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #ab1111;
+    font-size: 15px;
+}
+.controls div img{
+    width: 25px;
+}
+
+.controls div p, span{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.controls h3{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+footer > p{
+    text-align: center;
+    color: #ffffffa8;
+    padding-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes idle {
+    100% {
+        background-position-x: -3500px;
+    }
+}
+
+@keyframes run {
+    100% {
+        background-position-x: -3764px;
+    }
+}
+
+@keyframes fireball {
+    100% {
+        background-position-x: -3838px;
+    }
+}
+
+@keyframes jump {
+    100% {
+        background-position-x: -4500px;
+    }
+}
+
+@keyframes atack {
+    100% {
+        background-position-x: -2000px;
+    }
+}
+
+@keyframes flameJet {
+    100% {
+        background-position-x: -7000px;
+    }
+}
