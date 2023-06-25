@@ -52,7 +52,7 @@ runRight = () => {
     setTimeout(() => {
         $("#caracther").addClass("run");
     }, 10);
-
+ 
     if (wizardX < sceneWidth - 360) {
         wizardX += 50
         $("#caracther").animate({ left: wizardX + 'px' }, { duration: 500 })
@@ -65,8 +65,7 @@ runRight = () => {
 
 jump = () => {
     var currentClass = $("#caracther").attr('class');
-    $("#caracther").removeClass(currentClass).addClass("jump"); 
-    $("#caracther").removeClass(currentClass);
+    $("#caracther").removeClass(currentClass)
     setTimeout(() => {
         $("#jumping")[0].play()
         $("#jumping")[0].volume = 1;
@@ -76,7 +75,6 @@ jump = () => {
 
 atack = () => {
     var currentClass = $("#caracther").attr('class');
-    $("#caracther").removeClass(currentClass).addClass("atack");
     $("#caracther").removeClass(currentClass);
     setTimeout(() => {
         $("#slice")[0].play()
@@ -95,7 +93,6 @@ fireball = () => {
 
 flameJet = () => {
     var currentClass = $("#caracther").attr('class');
-    $("#caracther").removeClass(currentClass).addClass("flameJet");
     $("#caracther").removeClass(currentClass);
     setTimeout(() => {
         $("#fireMagic")[0].play()
